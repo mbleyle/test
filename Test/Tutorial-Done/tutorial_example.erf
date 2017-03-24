@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.corticon.rulesemf.assetmodel:RuleflowAsset xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.corticon.rulesemf.assetmodel="http:///com/corticon/rulesemf/assetmodel.ecore" xmlns:com.corticon.rulesemf.canonicalrulemodel.ruleflow="http:///com/corticon/rulesemf/canonicalrulemodel/ruleflow.ecore" xmlns:com.corticon.rulesemf.viewrulemodel.ruleflow.flowdiagram="http:///com/corticon/rulesemf/viewrulemodel/ruleflow/flowdiagram.ecore" majorVersionNumber="5" minorVersionNumber="2" buildNumber="2433" updateStamp="_6z61kzPdEeGiEuLGcs-yGA" externalChecksum="3054974779:507989954:1292135240" rulesheetAssets="Cargo.ers#/">
+  <ruleflow minorVersion="16" vocabularyUpdateStamp="_6zKAlDPdEeGiEuLGcs-yGA" vocabulary="Cargo.ecore#/" workDocumentEntity="Cargo.ecore#//Cargo">
+    <flowControlList xsi:type="com.corticon.rulesemf.canonicalrulemodel.ruleflow:ActivityNode" name="tutorial_example" order="1" ruleActivityUpdateStamp="_6z61kjPdEeGiEuLGcs-yGA" invokes="Cargo.ers#//@ruleset"/>
+  </ruleflow>
+  <ruleflowViewList xsi:type="com.corticon.rulesemf.viewrulemodel.ruleflow.flowdiagram:FlowDiagram">
+    <flowShapeList xsi:type="com.corticon.rulesemf.viewrulemodel.ruleflow.flowdiagram:ActivityShape" x="204" y="96" width="181" height="97" activityNode="#//@ruleflow/@flowControlList.0"/>
+  </ruleflowViewList>
+</com.corticon.rulesemf.assetmodel:RuleflowAsset>

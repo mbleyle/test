@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.corticon.rulesemf.assetmodel:RulesheetAsset xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.corticon.rulesemf.asg="http:///com/corticon/rulesemf/asg.ecore" xmlns:com.corticon.rulesemf.assetmodel="http:///com/corticon/rulesemf/assetmodel.ecore" xmlns:com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable="http:///com/corticon/rulesemf/viewrulemodel/rulesheet/decisiontable.ecore" majorVersionNumber="5" minorVersionNumber="4" buildNumber="6093" updateStamp="_ZdisihLKEeSrYKO5BkmO6A" externalChecksum="3756276843:507989954:2000833317">
+  <languageCode>en_US</languageCode>
+  <ruleset vocabularyUpdateStamp="_-x7WQKVsEeO5Q7djJArKvQ" vocabulary="Cargo.ecore#/">
+    <rule>
+      <condition/>
+      <condition/>
+      <condition/>
+      <action/>
+    </rule>
+    <rule documentingRuleStatements="#//@ruleset/@ruleStatements.0" overriddenBy="#//@ruleset/@rules.2 #//@ruleset/@rules.4">
+      <condition>
+        <opaqueExpression expression="Cargo.weight &lt;= 20000">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Cargo.weight &lt;= 20000" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="weight" datatype="Integer" termtype="ATTRIBUTE" fulltext="Cargo.weight">
+                <parentTerm text="Cargo" datatype="Cargo" termtype="ENTITY" fulltext="Cargo" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="Cargo.weight" rhs="&lt;= 20000"/>
+      </condition>
+      <condition/>
+      <condition/>
+      <action>
+        <opaqueExpression expression="Cargo.container = containerType#standard">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Cargo.container = 'standard'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="container" datatype="String" termtype="ATTRIBUTE" fulltext="Cargo.container">
+                <parentTerm text="Cargo" datatype="Cargo" termtype="ENTITY" fulltext="Cargo"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="Cargo" datatype="Cargo" termtype="ENTITY" fulltext="Cargo" variable="#//@ruleset/@logicalVariables.0"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+    </rule>
+    <rule documentingRuleStatements="#//@ruleset/@ruleStatements.1" overrides="#//@ruleset/@rules.1 #//@ruleset/@rules.4">
+      <condition/>
+      <condition>
+        <opaqueExpression expression="Cargo.volume > 30">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Cargo.volume > 30" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="volume" datatype="Integer" termtype="ATTRIBUTE" fulltext="Cargo.volume">
+                <parentTerm text="Cargo" datatype="Cargo" termtype="ENTITY" fulltext="Cargo" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="Cargo.volume" rhs="> 30"/>
+      </condition>
+      <condition/>
+      <action>
+        <opaqueExpression expression="Cargo.container = containerType#oversize">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Cargo.container = 'oversize'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="container" datatype="String" termtype="ATTRIBUTE" fulltext="Cargo.container">
+                <parentTerm text="Cargo" datatype="Cargo" termtype="ENTITY" fulltext="Cargo"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="Cargo" datatype="Cargo" termtype="ENTITY" fulltext="Cargo" variable="#//@ruleset/@logicalVariables.0"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+    </rule>
+    <rule documentingRuleStatements="#//@ruleset/@ruleStatements.2" overriddenBy="#//@ruleset/@rules.4">
+      <condition>
+        <opaqueExpression expression="Cargo.weight > 20000">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Cargo.weight > 20000" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="weight" datatype="Integer" termtype="ATTRIBUTE" fulltext="Cargo.weight">
+                <parentTerm text="Cargo" datatype="Cargo" termtype="ENTITY" fulltext="Cargo" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="Cargo.weight" rhs="> 20000"/>
+      </condition>
+      <condition>
+        <opaqueExpression expression="Cargo.volume &lt;= 30">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Cargo.volume &lt;= 30" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="volume" datatype="Integer" termtype="ATTRIBUTE" fulltext="Cargo.volume">
+                <parentTerm text="Cargo" datatype="Cargo" termtype="ENTITY" fulltext="Cargo" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="Cargo.volume" rhs="&lt;= 30"/>
+      </condition>
+      <condition/>
+      <action>
+        <opaqueExpression expression="Cargo.container = containerType#heavyweight">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Cargo.container = 'heavyweight'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="container" datatype="String" termtype="ATTRIBUTE" fulltext="Cargo.container">
+                <parentTerm text="Cargo" datatype="Cargo" termtype="ENTITY" fulltext="Cargo"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="Cargo" datatype="Cargo" termtype="ENTITY" fulltext="Cargo" variable="#//@ruleset/@logicalVariables.0"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+    </rule>
+    <rule documentingRuleStatements="#//@ruleset/@ruleStatements.3" overrides="#//@ruleset/@rules.1 #//@ruleset/@rules.3" overriddenBy="#//@ruleset/@rules.2">
+      <condition/>
+      <condition/>
+      <condition>
+        <opaqueExpression expression="(Cargo.needsRefrigeration)=true">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( Cargo.needsRefrigeration ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="needsRefrigeration" datatype="Boolean" termtype="ATTRIBUTE" fulltext="Cargo.needsRefrigeration">
+                <parentTerm text="Cargo" datatype="Cargo" termtype="ENTITY" fulltext="Cargo" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="Cargo.needsRefrigeration" rhs="T"/>
+      </condition>
+      <action>
+        <opaqueExpression expression="Cargo.container = containerType#reefer">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Cargo.container = 'reefer'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="container" datatype="String" termtype="ATTRIBUTE" fulltext="Cargo.container">
+                <parentTerm text="Cargo" datatype="Cargo" termtype="ENTITY" fulltext="Cargo"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="Cargo" datatype="Cargo" termtype="ENTITY" fulltext="Cargo" variable="#//@ruleset/@logicalVariables.0"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+    </rule>
+    <ruleStatement post="Info" ruleModelElements="#//@ruleset/@rules.1" logicalVariable="#//@ruleset/@logicalVariables.0">
+      <text expression="Cargo weighing &lt;= 20,000 kilos must be packaged in a standard container.">
+        <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Cargo weighing &lt;= 20,000 kilos must be packaged in a standard container." expressiontype="BRSTATEMENT">
+          <referencedTermList/>
+        </parserOutput>
+      </text>
+    </ruleStatement>
+    <ruleStatement post="Info" ruleModelElements="#//@ruleset/@rules.2" logicalVariable="#//@ruleset/@logicalVariables.0">
+      <text expression="Cargo with volume > 30 cubic meters must be packaged in an oversize container.">
+        <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Cargo with volume > 30 cubic meters must be packaged in an oversize container." expressiontype="BRSTATEMENT">
+          <referencedTermList/>
+        </parserOutput>
+      </text>
+    </ruleStatement>
+    <ruleStatement post="Info" ruleModelElements="#//@ruleset/@rules.3" logicalVariable="#//@ruleset/@logicalVariables.0">
+      <text expression="Cargo weighing > 20,000 kilos, with volume &lt;= 30 cubic meters, must be packaged in a heavyweight container.">
+        <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Cargo weighing > 20,000 kilos, with volume &lt;= 30 cubic meters, must be packaged in a heavyweight container." expressiontype="BRSTATEMENT">
+          <referencedTermList/>
+        </parserOutput>
+      </text>
+    </ruleStatement>
+    <ruleStatement post="Info" ruleModelElements="#//@ruleset/@rules.4" logicalVariable="#//@ruleset/@logicalVariables.0">
+      <text expression="Cargo requiring refrigeration must be packaged in a reefer container.">
+        <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Cargo requiring refrigeration must be packaged in a reefer container." expressiontype="BRSTATEMENT">
+          <referencedTermList/>
+        </parserOutput>
+      </text>
+    </ruleStatement>
+    <logicalVariable entity="Cargo.ecore#//Cargo" ruleStatements="#//@ruleset/@ruleStatements.0 #//@ruleset/@ruleStatements.1 #//@ruleset/@ruleStatements.2 #//@ruleset/@ruleStatements.3">
+      <referencedAttributes attribute="Cargo.ecore#//Cargo/weight"/>
+      <referencedAttributes attribute="Cargo.ecore#//Cargo/container"/>
+      <referencedAttributes attribute="Cargo.ecore#//Cargo/volume"/>
+      <referencedAttributes attribute="Cargo.ecore#//Cargo/needsRefrigeration"/>
+    </logicalVariable>
+  </ruleset>
+  <rulesheetViewList xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:DecisionTable">
+    <actionSection rowCount="50" columnWidthFactor="0.5">
+      <actionItemList>
+        <valueSetCell valueSet=""/>
+        <expressionCell external="Cargo.container">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Cargo.container" datatype="String" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
+            <referencedTermList>
+              <terms text="container" datatype="String" termtype="ATTRIBUTE" fulltext="Cargo.container">
+                <parentTerm text="Cargo" datatype="Cargo" termtype="ENTITY" fulltext="Cargo" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </actionItemList>
+    </actionSection>
+    <scopeSection>
+      <rootNode>
+        <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeEntity" logicalVariable="#//@ruleset/@logicalVariables.0">
+          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@referencedAttributes.0"/>
+          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@referencedAttributes.1"/>
+          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@referencedAttributes.2"/>
+          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@referencedAttributes.3"/>
+        </children>
+      </rootNode>
+    </scopeSection>
+    <filterSection rowCount="50"/>
+    <ruleStatementSection rowCount="50" columnWidthReference="50" columnWidthPostSeverity="50" columnWidthAlias="58" columnWidthID="23" columnWidthText="600" columnWidthRuleName="100" columnWidthRuleLink="100" columnWidthSourceName="100" columnWidthSourceLink="100" columnWidthCategory="100" columnWidthComments="400">
+      <ruleStatementItemList ruleStatement="#//@ruleset/@ruleStatements.0">
+        <reference external="1"/>
+        <text external="Cargo weighing &lt;= 20,000 kilos must be packaged in a standard container.">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Cargo weighing &lt;= 20,000 kilos must be packaged in a standard container." expressiontype="BRSTATEMENT">
+            <referencedTermList/>
+          </parserOutput>
+        </text>
+      </ruleStatementItemList>
+      <ruleStatementItemList ruleStatement="#//@ruleset/@ruleStatements.1">
+        <reference external="2"/>
+        <text external="Cargo with volume > 30 cubic meters must be packaged in an oversize container.">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Cargo with volume > 30 cubic meters must be packaged in an oversize container." expressiontype="BRSTATEMENT">
+            <referencedTermList/>
+          </parserOutput>
+        </text>
+      </ruleStatementItemList>
+      <ruleStatementItemList ruleStatement="#//@ruleset/@ruleStatements.2">
+        <reference external="3"/>
+        <text external="Cargo weighing > 20,000 kilos, with volume &lt;= 30 cubic meters, must be packaged in a heavyweight container.">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Cargo weighing > 20,000 kilos, with volume &lt;= 30 cubic meters, must be packaged in a heavyweight container." expressiontype="BRSTATEMENT">
+            <referencedTermList/>
+          </parserOutput>
+        </text>
+      </ruleStatementItemList>
+      <ruleStatementItemList ruleStatement="#//@ruleset/@ruleStatements.3">
+        <reference external="4"/>
+        <text external="Cargo requiring refrigeration must be packaged in a reefer container.">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Cargo requiring refrigeration must be packaged in a reefer container." expressiontype="BRSTATEMENT">
+            <referencedTermList/>
+          </parserOutput>
+        </text>
+      </ruleStatementItemList>
+    </ruleStatementSection>
+    <conditionSection rowCount="50" columnWidthFactor="0.69">
+      <conditionItemList variableMode="Literal">
+        <valueSetCell valueSet=""/>
+        <expressionCell external="Cargo.weight">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Cargo.weight" datatype="Integer" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="weight" datatype="Integer" termtype="ATTRIBUTE" fulltext="Cargo.weight">
+                <parentTerm text="Cargo" datatype="Cargo" termtype="ENTITY" fulltext="Cargo" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </conditionItemList>
+      <conditionItemList variableMode="Literal">
+        <valueSetCell valueSet=""/>
+        <expressionCell external="Cargo.volume">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Cargo.volume" datatype="Integer" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="volume" datatype="Integer" termtype="ATTRIBUTE" fulltext="Cargo.volume">
+                <parentTerm text="Cargo" datatype="Cargo" termtype="ENTITY" fulltext="Cargo" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </conditionItemList>
+      <conditionItemList variableMode="Literal">
+        <valueSetCell valueSet=""/>
+        <expressionCell external="Cargo.needsRefrigeration">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Cargo.needsRefrigeration" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="needsRefrigeration" datatype="Boolean" termtype="ATTRIBUTE" fulltext="Cargo.needsRefrigeration">
+                <parentTerm text="Cargo" datatype="Cargo" termtype="ENTITY" fulltext="Cargo" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </conditionItemList>
+    </conditionSection>
+    <ruleSection columnCount="20">
+      <ruleColumnList ruleId="0" columnWidth="53" pRule="#//@ruleset/@rules.0">
+        <conditionValueSetCellList valueSet=""/>
+        <conditionValueSetCellList valueSet=""/>
+        <conditionValueSetCellList valueSet=""/>
+        <actionValueSetCellList/>
+      </ruleColumnList>
+      <ruleColumnList ruleId="1" columnWidth="81" pRule="#//@ruleset/@rules.1">
+        <conditionValueSetCellList valueSet="&lt;= 20000"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <actionValueSetCellList valueSet="containerType#standard"/>
+      </ruleColumnList>
+      <ruleColumnList ruleId="2" columnWidth="85" pRule="#//@ruleset/@rules.2">
+        <overrideValueSetCell valueSet="{1, 4}"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="> 30"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <actionValueSetCellList valueSet="containerType#oversize"/>
+      </ruleColumnList>
+      <ruleColumnList ruleId="3" columnWidth="85" pRule="#//@ruleset/@rules.3">
+        <conditionValueSetCellList valueSet="> 20000"/>
+        <conditionValueSetCellList valueSet="&lt;= 30"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <actionValueSetCellList valueSet="containerType#heavyweight"/>
+      </ruleColumnList>
+      <ruleColumnList ruleId="4" columnWidth="73" pRule="#//@ruleset/@rules.4">
+        <overrideValueSetCell valueSet="{1, 3}"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="T"/>
+        <actionValueSetCellList valueSet="containerType#reefer"/>
+      </ruleColumnList>
+    </ruleSection>
+  </rulesheetViewList>
+</com.corticon.rulesemf.assetmodel:RulesheetAsset>
